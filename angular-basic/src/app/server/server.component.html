@@ -1,0 +1,27 @@
+<p>
+  server works!
+</p>
+<hr>
+<button class="btn btn-primary" [disabled] ="allowedDisabled" (click)='onServerStart()'> Click </button>
+<p>{{serverStatusStart }}</p>
+<p>server id {{serverId}}  & serverStatus {{serverStatus}}</p>
+<hr>
+<h2>Two way data binding</h2>
+<form action="" class="">
+  <label>Name Server is: </label>
+<input 
+   type="text" 
+   (input) = 'onServerName($event)'  
+   placeholder="Enter Server Name" 
+   class="form-control">
+
+   <!-- two way data binding -->
+        <!-- <input type="text" class="form-control" [( ngModel )]="serverName" /> -->
+        
+        <!-- <input 
+   type="text" 
+   [(ngModel)] = 'serverName'  
+   placeholder="Enter Server Name" 
+   class="form-control"> -->
+        <p>{{serverName}}</p>
+</form>
